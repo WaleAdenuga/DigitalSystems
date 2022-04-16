@@ -1,0 +1,380 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x8F40B0EE83A7CCCF",
+      "device": "xc7z020clg400-1",
+      "name": "design_2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1"
+    },
+    "design_tree": {
+      "VGA_timings_0": "",
+      "clk_wiz_0": "",
+      "xlconstant_0": "",
+      "xlconstant_1": "",
+      "xlconstant_2": "",
+      "Ascii_Chars_SPROM_0": "",
+      "VGA_pattern_0": "",
+      "ScreenBuffer_DPRAM_0": ""
+    },
+    "ports": {
+      "clk_in1_0": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "iRst_0": {
+        "direction": "I"
+      },
+      "oBlue_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "oGreen_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "oHS_0": {
+        "direction": "O"
+      },
+      "oRed_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "oVS_0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "VGA_timings_0": {
+        "vlnv": "xilinx.com:module_ref:VGA_timings:1.0",
+        "xci_name": "design_2_VGA_timings_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "VGA_timings",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iClk": {
+            "direction": "I"
+          },
+          "iRst": {
+            "direction": "I"
+          },
+          "oHS": {
+            "direction": "O"
+          },
+          "oVS": {
+            "direction": "O"
+          },
+          "oCountH": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "oCountV": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_2_clk_wiz_0_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "80.0"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "312.659"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "245.713"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "25"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "36.500"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "8.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "36.500"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "5"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_2_xlconstant_0_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_2_xlconstant_1_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "10"
+          }
+        }
+      },
+      "xlconstant_2": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_2_xlconstant_2_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "Ascii_Chars_SPROM_0": {
+        "vlnv": "xilinx.com:module_ref:Ascii_Chars_SPROM:1.0",
+        "xci_name": "design_2_Ascii_Chars_SPROM_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Ascii_Chars_SPROM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iClk": {
+            "direction": "I"
+          },
+          "iAddr": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "oData": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "VGA_pattern_0": {
+        "vlnv": "xilinx.com:module_ref:VGA_pattern:1.0",
+        "xci_name": "design_2_VGA_pattern_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "VGA_pattern",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iClk": {
+            "direction": "I"
+          },
+          "iCountH": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "iCountV": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "iData1": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "iData2": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "oRed": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "oGreen": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "oBlue": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "oAddr1": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "oAddr2": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          }
+        }
+      },
+      "ScreenBuffer_DPRAM_0": {
+        "vlnv": "xilinx.com:module_ref:ScreenBuffer_DPRAM:1.0",
+        "xci_name": "design_2_ScreenBuffer_DPRAM_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ScreenBuffer_DPRAM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iClk": {
+            "direction": "I"
+          },
+          "iAddrA": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "oDataA": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "iWeB": {
+            "direction": "I"
+          },
+          "iAddrB": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "iDataB": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "ScreenBuffer_DPRAM_0_oDataA": {
+        "ports": [
+          "ScreenBuffer_DPRAM_0/oDataA",
+          "VGA_pattern_0/iData1"
+        ]
+      },
+      "VGA_pattern_0_oAddr1": {
+        "ports": [
+          "VGA_pattern_0/oAddr1",
+          "ScreenBuffer_DPRAM_0/iAddrA"
+        ]
+      },
+      "VGA_pattern_0_oBlue": {
+        "ports": [
+          "VGA_pattern_0/oBlue",
+          "oBlue_0"
+        ]
+      },
+      "VGA_pattern_0_oGreen": {
+        "ports": [
+          "VGA_pattern_0/oGreen",
+          "oGreen_0"
+        ]
+      },
+      "VGA_pattern_0_oRed": {
+        "ports": [
+          "VGA_pattern_0/oRed",
+          "oRed_0"
+        ]
+      },
+      "VGA_timings_0_oCountH": {
+        "ports": [
+          "VGA_timings_0/oCountH",
+          "VGA_pattern_0/iCountH"
+        ]
+      },
+      "VGA_timings_0_oCountV": {
+        "ports": [
+          "VGA_timings_0/oCountV",
+          "VGA_pattern_0/iCountV"
+        ]
+      },
+      "VGA_timings_0_oHS": {
+        "ports": [
+          "VGA_timings_0/oHS",
+          "oHS_0"
+        ]
+      },
+      "VGA_timings_0_oVS": {
+        "ports": [
+          "VGA_timings_0/oVS",
+          "oVS_0"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "clk_in1_0",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "VGA_timings_0/iClk",
+          "Ascii_Chars_SPROM_0/iClk",
+          "VGA_pattern_0/iClk",
+          "ScreenBuffer_DPRAM_0/iClk"
+        ]
+      },
+      "iRst_0_1": {
+        "ports": [
+          "iRst_0",
+          "VGA_timings_0/iRst"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "ScreenBuffer_DPRAM_0/iWeB"
+        ]
+      },
+      "xlconstant_1_dout": {
+        "ports": [
+          "xlconstant_1/dout",
+          "ScreenBuffer_DPRAM_0/iAddrB"
+        ]
+      },
+      "xlconstant_2_dout": {
+        "ports": [
+          "xlconstant_2/dout",
+          "ScreenBuffer_DPRAM_0/iDataB"
+        ]
+      },
+      "VGA_pattern_0_oAddr2": {
+        "ports": [
+          "VGA_pattern_0/oAddr2",
+          "Ascii_Chars_SPROM_0/iAddr"
+        ]
+      },
+      "Ascii_Chars_SPROM_0_oData": {
+        "ports": [
+          "Ascii_Chars_SPROM_0/oData",
+          "VGA_pattern_0/iData2"
+        ]
+      }
+    }
+  }
+}
