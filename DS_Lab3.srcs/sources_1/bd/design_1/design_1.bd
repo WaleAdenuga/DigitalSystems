@@ -1,0 +1,267 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xB79799FF23FA1DBB",
+      "device": "xc7z020clg400-1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_wiz_0": "",
+      "VGA_timings_0": "",
+      "VGA_pattern_0": ""
+    },
+    "ports": {
+      "oRed_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "oGreen_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "oBlue_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "clk_in1_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_in1_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "reset_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "oHS_0": {
+        "direction": "O"
+      },
+      "oVS_0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "80.0"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "312.659"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "245.713"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "25"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "36.500"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "8.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "36.500"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "5"
+          }
+        }
+      },
+      "VGA_timings_0": {
+        "vlnv": "xilinx.com:module_ref:VGA_timings:1.0",
+        "xci_name": "design_1_VGA_timings_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "VGA_timings",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iClk": {
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "25000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "iRst": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "oHS": {
+            "direction": "O"
+          },
+          "oVS": {
+            "direction": "O"
+          },
+          "oCountH": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "oCountV": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "VGA_pattern_0": {
+        "vlnv": "xilinx.com:module_ref:VGA_pattern:1.0",
+        "xci_name": "design_1_VGA_pattern_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "VGA_pattern",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iCountH": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "iCountV": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "oRed": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "oGreen": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "oBlue": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "VGA_timings_0/iClk"
+        ]
+      },
+      "VGA_timings_0_oCountH": {
+        "ports": [
+          "VGA_timings_0/oCountH",
+          "VGA_pattern_0/iCountH"
+        ]
+      },
+      "VGA_timings_0_oCountV": {
+        "ports": [
+          "VGA_timings_0/oCountV",
+          "VGA_pattern_0/iCountV"
+        ]
+      },
+      "VGA_pattern_0_oRed": {
+        "ports": [
+          "VGA_pattern_0/oRed",
+          "oRed_0"
+        ]
+      },
+      "VGA_pattern_0_oGreen": {
+        "ports": [
+          "VGA_pattern_0/oGreen",
+          "oGreen_0"
+        ]
+      },
+      "VGA_pattern_0_oBlue": {
+        "ports": [
+          "VGA_pattern_0/oBlue",
+          "oBlue_0"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "clk_in1_0",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "reset_0",
+          "clk_wiz_0/reset",
+          "VGA_timings_0/iRst"
+        ]
+      },
+      "VGA_timings_0_oHS": {
+        "ports": [
+          "VGA_timings_0/oHS",
+          "oHS_0"
+        ]
+      },
+      "VGA_timings_0_oVS": {
+        "ports": [
+          "VGA_timings_0/oVS",
+          "oVS_0"
+        ]
+      }
+    }
+  }
+}
